@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTES</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="https://kit.fontawesome.com/4b42927fe7.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>ENTER NEW NOTE : </h2>
+        <form action="/" method="POST">
+            <input type="text" id="newNote" name="note" class=" form-control form-control-sm">            
+            <button type="submit" class="submit"><i class="fa-solid fa-plus"></i></button>
+        </form>
+        <div class="prevNotes">
+            <% data.forEach((e)=>{ %>
+                <div class="noteBox">
+                    <span class="noteSpace">
+                        <%= e.note %>
+                    </span>                                
+                    <span class="pinArea">
+                        <form action="/delete" method="POST">
+                            <input type="text" name="deleted" value="<%= e.note %>" style="display: none;">
+                            <button id="del" class="pinBtn" type="submit"><i class="fa-solid fa-trash-can"></i></button>
+                        </form>
+                        <form action="/pin" method="POST">
+                            <input type="text" name="pinned" value="<%= e.note %>" style="display: none;">
+                            <button id="pin" class="pinBtn" type="submit"><i class="fa-solid fa-thumbtack"></i></button> 
+                        </form>
+                    </span>                
+                </div>               
+                <div style="height: 50px;"></div>
+            <% }) %> 
+        </div>
+    </div>
+</body>
+</html>

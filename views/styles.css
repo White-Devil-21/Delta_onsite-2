@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(50, 47, 47);
+    color: white;
+    font-size: 150%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#newNote{
+    font-size: 120%;
+    height: 5em;
+    width: 800px;
+    margin-left: 100px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.submit{
+    font-size: 200%;
+    margin-left: 55px;
+}
+.prevNotes{
+    margin-top: 8%;
+    color: black;
+}
+.noteBox{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: rgb(235, 205, 9);
+    width: 700px;    
+    border-radius: 25px;
+}
+.pinArea{
+    margin-top: 6%;
+    display: flex;
+    align-self:  flex-end;
+    vertical-align: bottom;
+}
+.pinBtn{
+    font-size: 125%;
+    margin-right: 5%;
+    border-right-width: 30px;
+    border-color: rgb(235, 205, 9);
+    border-style: solid;
+}
+.pinBtn:hover{
+    cursor: pointer;
+}
